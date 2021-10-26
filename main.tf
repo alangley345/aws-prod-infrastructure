@@ -1,3 +1,4 @@
+#specific provider
 provider "aws" {
   region  = "us-east-2"
 }
@@ -5,8 +6,8 @@ provider "aws" {
 #define location of state file
 terraform {
   backend "s3" {
-    bucket = "myterraform-us-east-2"
-    key    = "terraform.tfstate"
-    region = "us-east-2"
+    bucket = "myterraformcode"
+    key    = "production/terraform.tfstate"
+    region = "us-east-1"
   }
 }
