@@ -1,3 +1,3 @@
-modules "public_dns_zones" {
+module "public_dns_zones" {
   source = "./public_dns_zones"
 }
