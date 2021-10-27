@@ -1,5 +1,5 @@
 resource "aws_route53_record" "resume" {
-  zone_id = aaronlangley.output.route53_public_zone
+  zone_id = aws_route53_zone.aaronlangley.zone_id
   name    = "resume.aaronlangley.net"
   type    = "A"
 
