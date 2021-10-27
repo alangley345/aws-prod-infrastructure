@@ -9,7 +9,7 @@ module "s3" {
 }
 
 #cloudfront distributions
-module "cloudfront" {
-  source = "./cloudfront"
-}
+#module "cloudfront" {
+# source = "./cloudfront"
+#}
 

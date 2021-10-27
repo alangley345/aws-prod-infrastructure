@@ -19,7 +19,6 @@ resource "aws_s3_bucket" "resume" {
     prevent_destroy = true
   }
 
-  bucket_domain_name = var.bucket_domain_name
 }
 
 output "resume_bucket_domain_name" {
