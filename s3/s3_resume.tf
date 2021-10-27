@@ -21,5 +21,5 @@ resource "aws_s3_bucket" "resume" {
 }
 
 output "resume_bucket_domain_name" {
-  value = "aws_s3_bucket.resume.bucket_domain_name"
+ value = "aws_s3_bucket.resume.bucket_domain_name"
 }
