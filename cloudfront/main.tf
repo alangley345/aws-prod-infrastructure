@@ -11,3 +11,7 @@ terraform {
     region = "us-east-1"
   }
 }
+
+module "S3" {
+  source = "../s3"
+}

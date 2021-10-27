@@ -6,7 +6,7 @@ resource "aws_cloudfront_distribution" "resumesite" {
   enabled             = true
   default_root_object = "index.html"
   
-  depends_on = [aws_s3_bucket.site-bucket, aws_acm_certificate.resume]
+  #depends_on = [aws_s3_bucket.site-bucket, aws_acm_certificate.resume]
   
   aliases = ["resume.aaronlangley.net"]
 
@@ -37,7 +37,7 @@ resource "aws_cloudfront_distribution" "resumesite" {
   }
 
   origin {
-    domain_name = aws_s3_bucket.site-bucket.bucket_domain_name
+    domain_name = module.S3.aws_s3_bucket.site-bucket.bucket_domain_name
     origin_id   = local.s3_origin_id
 
     #s3_origin_config {

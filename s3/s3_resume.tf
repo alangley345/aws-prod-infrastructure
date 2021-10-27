@@ -1,7 +1,7 @@
-resource "aws_s3_bucket" "site-bucket" {
+resource "aws_s3_bucket" "resume" {
   bucket = "resume.aaronlangley.net"
   acl    = "public-read"
-  policy = file("s3_resume_policy.json")
+  policy = file("./s3_resume_policy.json")
 
   cors_rule {
     allowed_headers = ["*"]
@@ -19,4 +19,8 @@ resource "aws_s3_bucket" "site-bucket" {
   lifecycle {
     prevent_destroy = true
   }
+}
+
+output "resume_bucket_domain_name" {
+  value = "aws_s3_bucket.resume.bucket_domain_name"
 }
