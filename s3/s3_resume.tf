@@ -1,8 +1,7 @@
 resource "aws_s3_bucket" "resume" {
   bucket = "resume.aaronlangley.net"
   acl    = "public-read"
-  policy = file("./s3_resume_policy.json")
-
+  
   cors_rule {
     allowed_headers = ["*"]
     allowed_methods = ["GET","HEAD"]

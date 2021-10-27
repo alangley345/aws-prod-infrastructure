@@ -37,7 +37,7 @@ resource "aws_cloudfront_distribution" "resumesite" {
   }
 
   origin {
-    domain_name = module.S3.aws_s3_bucket.site-bucket.bucket_domain_name
+    domain_name = module.s3.resume_bucket_domain_name
     origin_id   = local.s3_origin_id
 
     #s3_origin_config {
