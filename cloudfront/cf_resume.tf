@@ -2,6 +2,7 @@ locals {
   s3_origin_id = "cloudresumechallenge"
 }
 
+#frontend for resume.aaronlangley.net
 resource "aws_cloudfront_distribution" "resumesite" {
   enabled             = true
   default_root_object = "index.html"
