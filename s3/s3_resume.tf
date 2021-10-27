@@ -18,8 +18,10 @@ resource "aws_s3_bucket" "resume" {
   lifecycle {
     prevent_destroy = true
   }
+
+  bucket_domain_name = var.bucket_domain_name
 }
 
 output "resume_bucket_domain_name" {
- value = "aws_s3_bucket.resume.bucket_domain_name"
+ value = "module.resume.bucket_domain_name"
 }
