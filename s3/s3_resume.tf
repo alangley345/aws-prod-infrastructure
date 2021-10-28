@@ -21,6 +21,14 @@ resource "aws_s3_bucket" "resume" {
 
 }
 
-output "resume_bucket_domain_name" {
- value = "module.resume.bucket_domain_name"
+variable "bucket_website_endpoint" {
+  type = string
+}
+
+variable "bucket_id" {
+  type = string
+}
+
+variable "bucket_arn" {
+  type = string
 }

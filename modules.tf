@@ -6,6 +6,7 @@ module "public_dns_zones" {
 #s3 buckets and policies
 module "s3" {
   source = "./s3"
+  bucket_website_endpoint = "${module.aws_s3_bucket.website_endpoint}"
 }
 
 #cloudfront distributions
