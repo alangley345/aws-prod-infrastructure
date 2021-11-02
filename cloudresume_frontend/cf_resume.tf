@@ -1,13 +1,13 @@
 resource "aws_cloudfront_distribution" "resume" {
   origin {
-    domain_name = "${aws_s3_bucket.resume.bucket_domain_name}"
+    domain_name = aws_s3_bucket.resume.bucket_domain_name
     origin_id   = "mycloudresume"
     
   }
 
   enabled             = true
   is_ipv6_enabled     = true
-  comment             = "Some comment"
+  comment             = "Cloud Resume Frontend"
   default_root_object = "index.html"
 
   #logging_config {
@@ -52,7 +52,9 @@ resource "aws_cloudfront_distribution" "resume" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = var.cf_cert
+    minimum_protocol_version = "TLSv1.2_2019"
+    ssl_support_method       = "sni-only"
   }
 }
 
