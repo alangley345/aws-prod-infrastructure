@@ -8,10 +8,5 @@ resource "aws_apigatewayv2_api" "resume" {
     purpose     = "cloudresumechallenge"
   }
 
-  cors_configuration = {
-      allow_headers  = ["https://resume.aaronlangley.net"]
-      allow_methods  = ["*"]
-      allow_origins  = ["*"]
-      expose_headers = ["*"]
-  }
+ 
 }
