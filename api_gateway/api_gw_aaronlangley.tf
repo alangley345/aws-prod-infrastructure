@@ -10,3 +10,7 @@ resource "aws_apigatewayv2_api" "resume" {
 
  
 }
+
+output "api_aaronlangley_id" {
+  value = "aws_apigatewayv2_api.id"
+}
