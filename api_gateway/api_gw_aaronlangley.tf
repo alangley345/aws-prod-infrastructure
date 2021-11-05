@@ -14,7 +14,3 @@ resource "aws_apigatewayv2_api" "api" {
 output "api_aaronlangley_id" {
   value = aws_apigatewayv2_api.api.id
 }
-
-output "api_aaronlangley_domain" {
-  value = aws_apigatewayv2_api.api.domain_name
-}

@@ -4,7 +4,7 @@ resource "aws_route53_record" "api" {
   type    = "A"
 
   alias {
-    name                   = aws_apigatewayv2_api.api.domain_name
+    name                   = aws_apigatewayv2_api.api.id
     zone_id                = var.rt53_zone
     evaluate_target_health = true
   }
@@ -16,7 +16,7 @@ resource "aws_route53_record" "api_IPv6" {
   type    = "AAAA"
 
   alias {
-    name                   = aws_apigatewayv2_api.api.domain_name
+    name                   = aws_apigatewayv2_api.api.id
     zone_id                = var.rt53_zone
     evaluate_target_health = true
   }
