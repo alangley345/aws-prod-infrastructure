@@ -9,7 +9,7 @@ module "certificates" {
   aaronlangley_zone = module.public_dns_zones.aaronlangley_zone_id
 }
 
-#route53 hosted dns zones and records
+#resources specifically related to front of resume page
 module "cloudresume_frontend" {
   source = "./cloudresume_frontend"
   
@@ -17,6 +17,7 @@ module "cloudresume_frontend" {
   rt53_zone = module.public_dns_zones.aaronlangley_zone_id
 }
 
+#resources specifically related to backend of resume page
 module "cloudresume_backend" {
   source = "./cloudresume_backend"
 
