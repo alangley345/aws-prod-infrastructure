@@ -5,8 +5,6 @@ resource "aws_cloudfront_distribution" "resume" {
     
   }
 
-  depends_on = ["var.cf_cert"]
-
   enabled             = true
   is_ipv6_enabled     = true
   comment             = "Cloud Resume Frontend"

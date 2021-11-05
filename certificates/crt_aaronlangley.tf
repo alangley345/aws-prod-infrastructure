@@ -2,7 +2,7 @@
 resource "aws_acm_certificate" "aaronlangley" {
   domain_name       = "aaronlangley.net"
   validation_method = "DNS"
-  subject_alternative_names = [ "*.aaronlangley.net" ]
+  subject_alternative_names = [ "*.aaronlangley.net", ]
 
   tags = {
     Purpose = "cloudresumechallenge"
@@ -25,7 +25,11 @@ resource "aws_route53_record" "certificate_validation" {
 #validation
 resource aws_acm_certificate_validation "resume-validation" {
  certificate_arn = aws_acm_certificate.aaronlangley.arn
- validation_record_fqdns = [ aws_route53_record.certificate_validation.fqdn ]
+ validation_record_fqdns = [ var.aaronlangley_zone ]
+
+  timeouts {
+    create = "2m"
+  }
 }
 
 output "wildcard_arn" {
