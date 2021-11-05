@@ -25,7 +25,7 @@ resource "aws_route53_record" "certificate_validation" {
 #validation
 resource aws_acm_certificate_validation "resume-validation" {
  certificate_arn = aws_acm_certificate.aaronlangley.arn
- validation_record_fqdns = aws_route53_record.aws_acm_certificate_validation.fqdn
+ validation_record_fqdns = [aws_route53_record.certificate_validation.fqdn]
 
   timeouts {
     create = "2m"
