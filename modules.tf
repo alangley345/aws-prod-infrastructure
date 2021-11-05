@@ -20,5 +20,6 @@ module "cloudresume_frontend" {
 module "cloudresume_backend" {
   source = "./cloudresume_backend"
 
-  aaronlangley_zone = module.public_dns_zones.aaronlangley_zone_id
+  cf_cert   = module.certificates.wildcard_arn
+  rt53_zone = module.public_dns_zones.aaronlangley_zone_id
 }
