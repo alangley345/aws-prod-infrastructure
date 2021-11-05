@@ -1,23 +1,11 @@
 resource "aws_route53_record" "api" {
   zone_id = var.rt53_zone
-  name    = "api.aaronlangley.net"
+  name    = aws_apigatewayv2_domain_name.aaronlangley.domain_name
   type    = "A"
 
   alias {
-    name                   = aws_apigatewayv2_api.api.id
-    zone_id                = var.rt53_zone
-    evaluate_target_health = true
-  }
-}
-
-resource "aws_route53_record" "api_IPv6" {
-  zone_id = var.rt53_zone
-  name    = "api.aaronlangley.net"
-  type    = "AAAA"
-
-  alias {
-    name                   = aws_apigatewayv2_api.api.id
-    zone_id                = var.rt53_zone
+    name                   = aws_apigatewayv2_domain_name.aaronlangley.domain_name_configuration[0].target_domain_name
+    zone_id                = aws_apigatewayv2_domain_name.aaronlangley.domain_name_configuration[0].hosted_zone_id
     evaluate_target_health = true
   }
 }

@@ -1,7 +1,7 @@
 resource "aws_apigatewayv2_api" "api" {
-  name          = "cloudresume-api-gw"
+  name          = "aaronlangley.net-api-gw"
   protocol_type = "HTTP"
-  description   = "Backend to resume.aaronlangley.net"
+  description   = "Backend to aaronlangley.net"
   
   tags          = {
     Environment = "production"
