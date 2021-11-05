@@ -2,6 +2,6 @@ variable "rt53_zone" {
  type = string
 }
 
-variable "cf_cert" {
+variable "gw_cert" {
  type = string
 }
