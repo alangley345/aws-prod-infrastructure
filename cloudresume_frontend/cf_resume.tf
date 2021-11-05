@@ -49,6 +49,7 @@ resource "aws_cloudfront_distribution" "resume" {
 
   tags = {
     Environment = "production"
+    purpose     = "cloudresumechallenge"
   }
 
   viewer_certificate {
