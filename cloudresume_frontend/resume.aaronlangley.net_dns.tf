@@ -10,7 +10,7 @@ resource "aws_route53_record" "resume" {
   }
 }
 
-resource "aws_route53_record" "resume" {
+resource "aws_route53_record" "resume_IPv6" {
   zone_id = var.rt53_zone
   name    = "resume.aaronlangley.net"
   type    = "AAAA"
