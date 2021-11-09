@@ -21,8 +21,7 @@ module "cloudresume_frontend" {
 module "cloudresume_backend" {
   source = "./cloudresume_backend"
 
-  gw_cert   = module.certificates.wildcard_arn
-  rt53_zone = module.public_dns_zones.aaronlangley_zone_id
+  api_id        = module.api_gateway.api_aaronlangley_id
 }
 
 module "api_gateway" {

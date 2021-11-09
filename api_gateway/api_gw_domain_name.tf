@@ -7,3 +7,7 @@ resource "aws_apigatewayv2_domain_name" "aaronlangley" {
     security_policy = "TLS_1_2"
   }
 }
+
+output "api_aaronlangley_domain_name" {
+  value = aws_apigatewayv2_api.aaronlangley.domain_name
+}

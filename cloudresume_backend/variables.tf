@@ -1,7 +1,7 @@
-variable "rt53_zone" {
+variable "api_mapping" {
  type = string
 }
 
-variable "gw_cert" {
+variable "api_id" {
  type = string
 }
