@@ -10,11 +10,6 @@ resource "aws_dynamodb_table" "resume" {
     type = "S"
   }
 
-  attribute {
-    name = "TopScore"
-    type = "N"
-  }
-
   ttl {
     attribute_name = "TimeToExist"
     enabled        = false
