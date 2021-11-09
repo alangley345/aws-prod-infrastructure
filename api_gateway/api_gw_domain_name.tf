@@ -9,5 +9,5 @@ resource "aws_apigatewayv2_domain_name" "aaronlangley" {
 }
 
 output "api_aaronlangley_domain_name" {
-  value = aws_apigatewayv2_api.aaronlangley.domain_name
+  value = aws_apigatewayv2_domain_name.aaronlangley.domain_name
 }

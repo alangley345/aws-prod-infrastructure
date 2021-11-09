@@ -21,7 +21,8 @@ module "cloudresume_frontend" {
 module "cloudresume_backend" {
   source = "./cloudresume_backend"
 
-  api_id        = module.api_gateway.api_aaronlangley_id
+  api_id     = module.api_gateway.api_aaronlangley_id
+  api_domain = module.api_gateway.api_aaronlangley_domain_name
 }
 
 module "api_gateway" {
