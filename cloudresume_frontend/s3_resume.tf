@@ -20,15 +20,3 @@ resource "aws_s3_bucket" "resume" {
   }
 
 }
-
-#variable "bucket_website_endpoint" {
-# type = string
-#}
-
-#variable "bucket_id" {
-# type = string
-#}
-
-#variable "bucket_arn" {
-# type = string
-#}
