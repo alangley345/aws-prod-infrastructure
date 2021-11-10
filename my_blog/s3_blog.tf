@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "resume" {
+resource "aws_s3_bucket" "aaronlangley.net" {
   bucket = "aaronlangley.net"
   acl    = "public-read"
   
