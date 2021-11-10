@@ -35,3 +35,7 @@ module "api_gateway" {
 module "s3" {
  source = "./s3"
 }
+
+module "my_blog" {
+ source = "./my_blog"
+}

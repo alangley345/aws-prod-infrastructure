@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "resume" {
-  bucket = "blog.aaronlangley.net"
+  bucket = "aaronlangley.net"
   acl    = "public-read"
   
   /*
