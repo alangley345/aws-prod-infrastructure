@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "aaronlangley.net" {
+resource "aws_s3_bucket" "aaronlangley" {
   bucket = "aaronlangley.net"
   acl    = "public-read"
   
