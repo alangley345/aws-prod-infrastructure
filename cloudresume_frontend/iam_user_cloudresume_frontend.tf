@@ -1,4 +1,4 @@
-resource "aws_iam_user" "cloudresume-frontend" {
+resource "aws_iam_user" "cloudresume_frontend" {
   name = "cloudresume-frontend"
   path = "/cloudresume/"
 
@@ -8,9 +8,9 @@ resource "aws_iam_user" "cloudresume-frontend" {
 }
 
 #used to allow github actions access to s3 bucket.
-resource "aws_iam_user_policy" "cloudresume-frontend" {
+resource "aws_iam_user_policy" "cloudresume_frontend" {
   name = "S3-resume.aaronlangley.net-FullAccess"
-  user = aws_iam_user.cloudresume_frontend
+  user = aws_iam_user.cloudresume_frontend.name
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
