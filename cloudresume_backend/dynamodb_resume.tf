@@ -9,12 +9,7 @@ resource "aws_dynamodb_table" "resume" {
     name = "event"
     type = "S"
   }
-
-  ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
-  }
-
+  
   tags = {
     purpose   = "cloudresumechallenge"
     Environment = "production"
