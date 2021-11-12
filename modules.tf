@@ -26,6 +26,7 @@ module "cloudresume_backend" {
   api_domain = module.api_gateway.api_aaronlangley_domain_name
 }
 
+#api gateways shared across domains
 module "api_gateway" {
   source = "./api_gateway"
 
