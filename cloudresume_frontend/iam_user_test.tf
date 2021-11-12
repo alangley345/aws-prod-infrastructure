@@ -13,5 +13,5 @@ resource "aws_iam_access_key" "test" {
 }
 
 output "secret" {
-    value = aws_iam_access_key.test.encrypted_secret
+    value = aws_iam_access_key.test.secret
 }
