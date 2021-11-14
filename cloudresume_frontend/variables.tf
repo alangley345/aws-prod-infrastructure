@@ -5,3 +5,7 @@ variable "rt53_zone" {
 variable "cf_cert" {
  type = string
 }
+
+variable "pgp_key" {
+ type = string
+}

@@ -15,6 +15,7 @@ module "cloudresume_frontend" {
   
   cf_cert   = module.certificates.wildcard_arn
   rt53_zone = module.public_dns_zones.aaronlangley_zone_id
+  pgp_key   = data.local_file.pgp_key.content
 }
 
 #resources specifically related to backend of resume page
@@ -25,6 +26,7 @@ module "cloudresume_backend" {
   api_domain = module.api_gateway.api_aaronlangley_domain_name
 }
 
+#api gateways shared across domains
 module "api_gateway" {
   source = "./api_gateway"
 
