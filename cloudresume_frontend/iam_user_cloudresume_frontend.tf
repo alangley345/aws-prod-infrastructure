@@ -6,3 +6,7 @@ resource "aws_iam_user" "cloudresume_frontend" {
     purpose = "cloudresumechallenge"
   }
 }
+resource "aws_iam_access_key" "cloudresume_frontend" {
+  user    = aws_iam_user.cloudresume_frontend.name
+  pgp_key = var.pgp_key
+}

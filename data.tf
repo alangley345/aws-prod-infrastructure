@@ -1,3 +1,3 @@
 data "local_file" "pgp_key" {
-  filename = "public-terraform-signing.asc"
+  filename = "access-key-signing-base64.gpg"
 }
