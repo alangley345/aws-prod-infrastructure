@@ -1,5 +1,5 @@
 #used to allow github actions access to s3 bucket.
-resource "aws_iam_user_policy" "cloudresume_frontend" {
+resource "aws_iam_user_policy" "s3_resume_FA" {
   name        = "S3-resume.aaronlangley.net-FullAccess"
   user        = aws_iam_user.cloudresume_frontend.name
 
