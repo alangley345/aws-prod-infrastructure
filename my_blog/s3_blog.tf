@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "aaronlangley" {
   bucket = "aaronlangley.net"
-  acl    = "public-read"
+  acl    = "private"
   
 
   cors_rule {
