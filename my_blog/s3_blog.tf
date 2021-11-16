@@ -1,21 +1,6 @@
 resource "aws_s3_bucket" "aaronlangley" {
   bucket = "aaronlangley.net"
   acl    = "private"
-  
-
-  cors_rule {
-    allowed_headers = ["*"]
-    allowed_methods = ["GET","HEAD"]
-    allowed_origins = ["*"]
-    expose_headers  = [""]
-  }
-  
-
-  website {
-    index_document = "index.html"
-    error_document = "error.html"
-
-  }
 
   lifecycle {
     prevent_destroy = true

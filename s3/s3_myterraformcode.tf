@@ -1,4 +1,4 @@
-#bucket for storing state
+#bucket for storing my terraform state
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "myterraformcode"
   acl    = "private"
