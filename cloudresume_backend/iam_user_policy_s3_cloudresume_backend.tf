@@ -2,7 +2,11 @@
 resource "aws_iam_user_policy" "s3_resume_FA" {
   name        = "S3-lambdafunctionstaging-FullAccess"
   user        = aws_iam_user.cloudresume_backend.name
-
+  
+  depends_on = [
+    aws_iam_user.cloudresume_backend
+  ]
+  
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
   policy = jsonencode({
@@ -19,8 +23,8 @@ resource "aws_iam_user_policy" "s3_resume_FA" {
                 "s3:DeleteObject"
             ],
             "Resource": [
-                "${aws_s3_bucket.resume.arn}",
-                "${aws_s3_bucket.resume.arn}/*"
+                "${var.lambda_bucket}",
+                "${var.lambda_bucket}/*"
             ]
         },
         {

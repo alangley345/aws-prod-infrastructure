@@ -9,4 +9,9 @@ resource "aws_iam_user" "cloudresume_frontend" {
 resource "aws_iam_access_key" "cloudresume_frontend" {
   user    = aws_iam_user.cloudresume_frontend.name
   pgp_key = var.pgp_key
+
+  depends_on = [
+    aws_iam_user.cloudresume_frontend
+  ]
+
 }

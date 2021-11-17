@@ -4,3 +4,4 @@ output "cloudresume_backend_secret" {
 
 output "cloudresume_backend_ID" {
     value = aws_iam_access_key.cloudresume_backend.id
+}

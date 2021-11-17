@@ -3,6 +3,7 @@ module "public_dns_zones" {
   source = "./public_dns_zones"
 }
 
+#certificates for AWS resources
 module "certificates" {
   source = "./certificates"
 
@@ -22,8 +23,10 @@ module "cloudresume_frontend" {
 module "cloudresume_backend" {
   source = "./cloudresume_backend"
 
-  api_id     = module.api_gateway.api_aaronlangley_id
-  api_domain = module.api_gateway.api_aaronlangley_domain_name
+  api_id        = module.api_gateway.api_aaronlangley_id
+  api_domain    = module.api_gateway.api_aaronlangley_domain_name
+  pgp_key       = data.local_file.pgp_key.content
+  lambda_bucket = module.s3.lambdafunctionstaging_arn
 }
 
 #api gateways shared across domains
@@ -36,8 +39,4 @@ module "api_gateway" {
 
 module "s3" {
  source = "./s3"
-}
-
-module "my_blog" {
- source = "./my_blog"
 }

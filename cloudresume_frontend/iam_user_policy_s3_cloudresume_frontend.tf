@@ -2,6 +2,10 @@
 resource "aws_iam_user_policy" "s3_resume_FA" {
   name        = "S3-resume.aaronlangley.net-FullAccess"
   user        = aws_iam_user.cloudresume_frontend.name
+  
+  depends_on = [
+    aws_iam_user.cloudresume_frontend
+  ]
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.

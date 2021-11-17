@@ -3,6 +3,10 @@ resource "aws_iam_user_policy" "cloudresume_frontend" {
   name        = "CF-Resume-InvalidationAccess"
   user        = aws_iam_user.cloudresume_frontend.name
 
+  depends_on = [
+    aws_iam_user.cloudresume_frontend
+  ]
+
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
   policy = jsonencode({
