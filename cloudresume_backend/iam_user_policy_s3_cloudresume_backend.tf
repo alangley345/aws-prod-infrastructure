@@ -1,5 +1,5 @@
 #used to allow github actions access to s3 bucket.
-resource "aws_iam_user_policy" "s3_resume_FA" {
+resource "aws_iam_user_policy" "s3_lambdafunctionstaging_FA" {
   name        = "S3-lambdafunctionstaging-FullAccess"
   user        = aws_iam_user.cloudresume_backend.name
   
