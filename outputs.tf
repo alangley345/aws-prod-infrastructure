@@ -9,3 +9,7 @@ output "lambda_bucket" {
 output "api_aaronlangley_id" {
   value = module.api_gateway.api_aaronlangley_id
 }
+
+output "api_aaronlangley_domain_name" {
+  value = module.api_gateway.api_aaronlangley_domain_name
+}
