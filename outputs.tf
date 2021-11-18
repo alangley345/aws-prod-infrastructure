@@ -3,6 +3,6 @@ output "access_token_signing" {
 }
 
 output "lambda_bucket" {
-    value = aws_s3_bucket.lambda_bucket
+    value = aws_s3_bucket.lambdafunctionstaging_arn
 }
 
