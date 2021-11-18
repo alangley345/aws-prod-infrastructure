@@ -10,16 +10,6 @@ module "certificates" {
   aaronlangley_zone = module.public_dns_zones.aaronlangley_zone_id
 }
 
-#resources specifically related to backend of resume page
-module "cloudresume_backend" {
-  source = "./cloudresume_backend"
-
-  api_id        = module.api_gateway.api_aaronlangley_id
-  api_domain    = module.api_gateway.api_aaronlangley_domain_name
-  pgp_key       = data.local_file.pgp_key.content
-  lambda_bucket = module.s3.lambdafunctionstaging_arn
-}
-
 #api gateways shared across domains
 module "api_gateway" {
   source = "./api_gateway"
