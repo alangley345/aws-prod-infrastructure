@@ -1,4 +1,4 @@
-resource "aws_apigatewayv2_api" "api" {
+resource "aws_apigatewayv2_api" "my_domain" {
   name          = "aaronlangley.net-api-gw"
   protocol_type = "HTTP"
   description   = "Backend to aaronlangley.net"
@@ -9,8 +9,4 @@ resource "aws_apigatewayv2_api" "api" {
   }
 
  
-}
-
-output "api_aaronlangley_id" {
-  value = aws_apigatewayv2_api.api.id
 }
