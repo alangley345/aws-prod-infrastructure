@@ -17,3 +17,7 @@ output "api_aaronlangley_domain_name" {
 output "wildcard_arn" {
   value = module.certificates.wildcard_arn
 }
+
+output "aaronlangley_zone_id" {
+  value = module.public_dns_zones.aaronlangley_zone_id
+}
