@@ -13,3 +13,7 @@ output "api_aaronlangley_id" {
 output "api_aaronlangley_domain_name" {
   value = module.api_gateway.api_aaronlangley_domain_name
 }
+
+output "wildcard_arn" {
+  value = module.certificates.wildcard_arn
+}
