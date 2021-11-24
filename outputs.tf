@@ -2,8 +2,12 @@ output "access_token_signing" {
     value = data.local_file.pgp_key.content
 }
 
-output "lambda_bucket" {
+output "lambda_bucket_arn" {
     value = module.s3.lambdafunctionstaging_arn
+}
+
+output "lambda_bucket_name" {
+    value = module.s3.lambdafunctionstaging_name
 }
 
 output "api_aaronlangley_id" {
