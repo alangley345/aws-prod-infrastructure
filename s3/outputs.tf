@@ -3,5 +3,5 @@ output "lambdafunctionstaging_arn" {
 }
 
 output "lambdafunctionstaging_name" {
-    value = aws_s3_bucket.lamdba_functions.name
+    value = aws_s3_bucket.lamdba_functions.id
 }
