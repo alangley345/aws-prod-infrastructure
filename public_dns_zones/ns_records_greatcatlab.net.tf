@@ -1,5 +1,5 @@
 resource "aws_route53_record" "tunnel_greatcatlab_net" {
-  zone_id = aws_route53_zone.aaronlangley.zone_id
+  zone_id = aws_route53_zone.greatcatlab.zone_id
   name    = "tunnel.greatcatlab.net"
   type    = "NS"
   ttl     = "300"
