@@ -18,6 +18,7 @@ module "api_gateway" {
   rt53_zone = module.public_dns_zones.aaronlangley_zone_id
 }
 
+#s3 buckets
 module "s3" {
  source = "./s3"
 }
