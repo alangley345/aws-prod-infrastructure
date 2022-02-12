@@ -26,7 +26,7 @@ resource "aws_route53_record" "kube_ep_02" {
   records        = ["kube02.greatcatlab.net"]
 }
 
-resource "aws_route53_record" "kube_ep" {
+resource "aws_route53_record" "kube_ep_03" {
   zone_id = aws_route53_zone.greatcatlab.zone_id
   name    = "kube-ep.greatcatlab.net"
   type    = "CNAME"
