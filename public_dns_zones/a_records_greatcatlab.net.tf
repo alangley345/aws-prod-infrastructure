@@ -27,6 +27,6 @@ resource "aws_route53_record" "vdi01" {
  name    = "vdi01.greatcatlab.net"
  type    = "A"
  ttl     = "300"
- records = ["207.2.121.17"]
+ records = [" 207.2.123.123"]
 }
 
