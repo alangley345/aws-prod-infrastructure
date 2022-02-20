@@ -45,8 +45,5 @@ resource "aws_route53_record" "ovh_main_v6" {
  name    = "ovh.greatcatlab.net"
  type    = "AAAA"
  ttl     = "300"
- records = ["147.135.5.154"]
+ records = ["2604:2dc0:100:59a::"]
 }
-
-
-2604:2dc0:100:59a::/64
