@@ -30,3 +30,23 @@ resource "aws_route53_record" "vdi01" {
  records = ["207.2.123.123"]
 }
 
+#OVH Server
+resource "aws_route53_record" "ovh_main_v4" {
+ zone_id = aws_route53_zone.greatcatlab.zone_id
+ name    = "ovh.greatcatlab.net"
+ type    = "A"
+ ttl     = "300"
+ records = ["147.135.5.154"]
+}
+
+#OVH Server
+resource "aws_route53_record" "ovh_main_v6" {
+ zone_id = aws_route53_zone.greatcatlab.zone_id
+ name    = "ovh.greatcatlab.net"
+ type    = "AAAA"
+ ttl     = "300"
+ records = ["147.135.5.154]"
+}
+
+
+2604:2dc0:100:59a::/64
