@@ -45,5 +45,5 @@ resource "aws_route53_record" "ovh_main_v6" {
  name    = "proxmox.greatcatlab.net"
  type    = "AAAA"
  ttl     = "300"
- records = ["2604:2dc0:100:59a::1"]
+ records = ["2604:2dc0:100:59a::"]
 }
