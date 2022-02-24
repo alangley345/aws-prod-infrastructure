@@ -22,3 +22,8 @@ module "api_gateway" {
 module "s3" {
  source = "./s3"
 }
+
+#iam
+module "iam" {
+ source = "./iam"
+}
