@@ -15,5 +15,5 @@ resource "aws_iam_user_group_membership" "le_proxmox" {
 #access keys
 resource "aws_iam_access_key" "le_proxmox" {
   user    = aws_iam_user.le_proxmox.name
-  pgp_key = data.pgp_key
+  pgp_key = var.pgp_key
 }
