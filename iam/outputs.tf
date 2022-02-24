@@ -1,3 +1,3 @@
-output "le_proxmox_encrypted_secret" {
-  value = aws_iam_access_key.le_proxmox.encrypted_secret
+output "le_proxmox_secret" {
+  value = aws_iam_access_key.le_proxmox.ecret
 }
