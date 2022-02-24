@@ -37,3 +37,7 @@ output "caller_arn" {
 output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
+
+output "account_id" {
+  value = module.iam.aws_iam_access_key.le_proxmox.encrypt_secret
+}
