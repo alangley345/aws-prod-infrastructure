@@ -26,4 +26,6 @@ module "s3" {
 #iam
 module "iam" {
  source = "./iam"
+
+ pgp_key = data.pgp_key
 }
