@@ -38,6 +38,7 @@ output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
 
-output "le_proxmox_encrypted_secret" {
-  value = module.iam.le_proxmox_encrypted_secret
+output "le_proxmox_secret" {
+  value = module.iam.le_proxmox_secret
+  sensitive = true
 }
