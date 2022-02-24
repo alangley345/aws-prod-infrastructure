@@ -27,5 +27,5 @@ module "s3" {
 module "iam" {
  source = "./iam"
 
- pgp_key = output.access_token_signing
+ pgp_key = data.local_file.pgp_key.content
 }
