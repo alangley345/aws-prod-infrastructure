@@ -38,12 +38,3 @@ resource "aws_route53_record" "ovh_main_v4" {
  ttl     = "300"
  records = ["147.135.5.154"]
 }
-
-#OVH Server
-resource "aws_route53_record" "ovh_main_v6" {
- zone_id = aws_route53_zone.greatcatlab.zone_id
- name    = "proxmox.greatcatlab.net"
- type    = "AAAA"
- ttl     = "300"
- records = ["2604:2dc0:100:59a::"]
-}
