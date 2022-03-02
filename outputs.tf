@@ -48,11 +48,11 @@ output "le_proxmox_secret" {
   sensitive = true
 }
 
-output "le_pfsense0_id" {
+output "le_pfsense02_id" {
   value = module.iam.le_pfsense02_id
 }
 
-output "le_pfsense0_secret" {
+output "le_pfsense02_secret" {
   value = module.iam.le_pfsense02_secret
   sensitive = true
 }
