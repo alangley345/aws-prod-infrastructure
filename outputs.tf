@@ -47,3 +47,12 @@ output "le_proxmox_secret" {
   value = module.iam.le_proxmox_secret
   sensitive = true
 }
+
+output "le_proxmox_id" {
+  value = module.iam.le_pfsense02_id
+}
+
+output "le_proxmox_secret" {
+  value = module.iam.le_pfsense02_secret
+  sensitive = true
+}
