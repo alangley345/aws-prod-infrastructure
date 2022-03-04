@@ -1,4 +1,4 @@
-resource "aws_route53_record" "cont01_v4" {
+resource "aws_route53_record" "relay01_v4" {
   zone_id = aws_route53_zone.greatcatlab.zone_id
   name    = "relay01.greatcatlab.net"
   type    = "A"
