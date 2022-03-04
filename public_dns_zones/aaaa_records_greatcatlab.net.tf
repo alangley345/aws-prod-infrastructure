@@ -6,4 +6,3 @@ resource "aws_route53_record" "ovh_main_v6" {
  ttl     = "300"
  records = ["2604:2dc0:100:59a::"]
 }
-}
