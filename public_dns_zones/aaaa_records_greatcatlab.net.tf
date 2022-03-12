@@ -13,7 +13,7 @@ resource "aws_route53_record" "ipa01_v6" {
  name    = "ipa01.int.greatcatlab.net"
  type    = "AAAA"
  ttl     = "300"
- records = ["2001:470:e107:1010::bbbb"]
+ records = ["2001:470:e107:1010::aaaa"]
 }
 
 #IPA Server 02
@@ -22,5 +22,5 @@ resource "aws_route53_record" "ipa02_v6" {
  name    = "ipa02.int.greatcatlab.net"
  type    = "AAAA"
  ttl     = "300"
- records = ["2001:470:e107:1010::aaaa"]
+ records = ["2001:470:e107:1010::bbbb"]
 }
