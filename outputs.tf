@@ -16,8 +16,8 @@ output "api_aaronlangley_id" {
   value = module.api_gateway.api_aaronlangley_id
 }
 
-output "api_aaronlangley_execution_arn" {
-  value = module.api_gateway.api_aaronlangley_execution_arn
+output "api_aaronlangley_arn" {
+  value = module.api_gateway.api_aaronlangley_arn
 }
 
 output "api_aaronlangley_domain_name" {
