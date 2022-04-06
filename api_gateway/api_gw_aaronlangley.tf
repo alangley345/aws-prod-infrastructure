@@ -4,7 +4,7 @@ resource "aws_apigatewayv2_api" "my_domain" {
   description   = "Backend to aaronlangley.net"
   cors_configuration {
     allow_origins = ["*"]
-    allow_methods = ["PUT", "GET"]
+    allow_methods = ["*"]
     allow_headers = ["*"]
     max_age = 300
   }
