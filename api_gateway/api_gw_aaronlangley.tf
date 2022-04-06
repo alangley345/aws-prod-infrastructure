@@ -5,7 +5,7 @@ resource "aws_apigatewayv2_api" "my_domain" {
   cors_configuration {
     allow_origins = ["*"]
     allow_methods = ["PUT", "GET"]
-    allow_headers = ["application/json"]
+    allow_headers = ["*"]
     max_age = 300
   }
   
