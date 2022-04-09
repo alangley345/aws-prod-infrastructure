@@ -1,3 +1,4 @@
+#pgp public key
 output "access_token_signing" {
     value = data.local_file.pgp_key.content
 }
@@ -8,9 +9,18 @@ output "lambda_bucket_arn" {
 }
 
 output "lambda_bucket_name" {
-    value = module.s3.lambdafunctionstaging_name
+    value = module.s3.lambdafunctionstaging_id
 }
 
+#Resume Bucket
+
+output "resume_aaronlangley_net_arn" {
+    value = module.s3.resume_aaronlangley_net_arn
+}
+
+output "resume_aaronlangley_net_id" {
+    value = module.s3.resume_aaronlangley_net_id
+}
 #API
 output "api_aaronlangley_id" {
   value = module.api_gateway.api_aaronlangley_id
@@ -48,6 +58,7 @@ output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
 
+#Let's Encrypt User for ACME on promox
 output "le_proxmox_id" {
   value = module.iam.le_proxmox_id
 }
@@ -58,6 +69,7 @@ output "le_proxmox_secret" {
   sensitive = true
 }
 
+#Let's Encrypt User for ACME on pfsense02
 output "le_pfsense02_id" {
   value = module.iam.le_pfsense02_id
 }
@@ -65,4 +77,13 @@ output "le_pfsense02_id" {
 output "le_pfsense02_secret" {
   value = module.iam.le_pfsense02_secret
   sensitive = true
+}
+
+#Github Actions user for cloudresume-frontend
+output "cloudresume_frontend_id" {
+  value = module.iam.cloudresume_frontend_id
+}
+
+output "cloudresume_frontend_secret" {
+   value = module.iam.cloudresume_frontend_secret
 }
