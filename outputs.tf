@@ -38,6 +38,10 @@ output "api_aaronlangley_domain_name" {
   value = module.api_gateway.api_aaronlangley_domain_name
 }
 
+output "api_aaronlangley_domain_name_id" {
+  value = module.api_gateway.api_aaronlangley_domain_name_id
+}
+
 output "wildcard_arn" {
   value = module.certificates.wildcard_arn
 }
