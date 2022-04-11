@@ -12,15 +12,6 @@ output "lambda_bucket_name" {
     value = module.s3.lambdafunctionstaging_id
 }
 
-#Resume Bucket
-
-output "resume_aaronlangley_net_arn" {
-    value = module.s3.resume_aaronlangley_net_arn
-}
-
-output "resume_aaronlangley_net_id" {
-    value = module.s3.resume_aaronlangley_net_id
-}
 #API
 output "api_aaronlangley_id" {
   value = module.api_gateway.api_aaronlangley_id
@@ -80,10 +71,10 @@ output "le_pfsense02_secret" {
 }
 
 #Github Actions user for cloudresume-frontend
-output "cloudresume_frontend_id" {
-  value = module.iam.cloudresume_frontend_id
+output "cloudresume_id" {
+  value = module.iam.cloudresume_id
 }
 
-output "cloudresume_frontend_secret" {
-   value = module.iam.cloudresume_frontend_secret
+output "cloudresume_secret" {
+   value = module.iam.cloudresume_secret
 }

@@ -17,10 +17,10 @@ output "le_pfsense02_secret" {
 }
 
 #used for access to bucket and cf for resume frontend
-output "cloudresume_frontend_id" {
-  value = aws_iam_access_key.cloudresume_frontend.id
+output "cloudresume_id" {
+  value = aws_iam_access_key.cloudresume.id
 }
 
-output "cloudresume_frontend_secret" {
-   value = aws_iam_access_key.cloudresume_frontend.encrypted_secret
+output "cloudresume_secret" {
+   value = aws_iam_access_key.cloudresume.encrypted_secret
 }
