@@ -74,6 +74,17 @@ output "le_pfsense02_secret" {
   sensitive = true
 }
 
+#Let's Encrypt User for ACME on pfsense01
+output "le_pfsense01_id" {
+  value = module.iam.le_pfsense01_id
+}
+
+output "le_pfsense01_secret" {
+  value = module.iam.le_pfsense01_secret
+  sensitive = true
+  
+}
+
 #Github Actions user for cloudresume-frontend
 output "cloudresume_id" {
   value = module.iam.cloudresume_id
