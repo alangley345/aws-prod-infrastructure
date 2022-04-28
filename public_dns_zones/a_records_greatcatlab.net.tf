@@ -39,11 +39,3 @@ resource "aws_route53_record" "ovh_main_v4" {
  records = ["147.135.5.154"]
 }
 
-#OVH Server
-resource "aws_route53_record" "nvr" {
- zone_id = aws_route53_zone.greatcatlab.zone_id
- name    = "nvr.greatcatlab.net"
- type    = "CNAME"
- ttl     = "300"
- records = ["1.tunnel.greatcatlab.net"]
-}
