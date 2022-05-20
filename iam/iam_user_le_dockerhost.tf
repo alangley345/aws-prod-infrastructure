@@ -5,7 +5,7 @@ resource "aws_iam_user" "le_dockerhost" {
 
 #groups
 resource "aws_iam_user_group_membership" "le_dockerhost" {
-  user = aws_iam_user.le_dockerhost
+  user = aws_iam_user.le_dockerhost.name
 
   groups = [
     "DNS"
