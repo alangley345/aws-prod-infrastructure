@@ -59,7 +59,7 @@ output "le_dockerhost_id" {
 }
 
 
-output "le_proxmox_secret" {
+output "le_dockerhost_secret" {
   value = module.iam.le_dockerhost_secret
   sensitive = true
 }
