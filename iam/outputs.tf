@@ -1,10 +1,10 @@
-#let's encrypt user for Proxmox host
-output "le_proxmox_id" {
-  value = aws_iam_access_key.le_proxmox.id
+#let's encrypt user for Docker host
+output "le_dockerhost_id" {
+  value = aws_iam_access_key.le_dockerhost.id
 }
 
-output "le_proxmox_secret" {
-  value = aws_iam_access_key.le_proxmox.secret
+output "le_dockerhost_secret" {
+  value = aws_iam_access_key.le_dockerhost.secret
 }
 
 #lets encrypt user for pfsense02 @ OVH

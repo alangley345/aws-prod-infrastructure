@@ -53,14 +53,14 @@ output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
 
-#Let's Encrypt User for ACME on promox
-output "le_proxmox_id" {
-  value = module.iam.le_proxmox_id
+#Let's Encrypt User for ACME on Dockerhost
+output "le_dockerhost_id" {
+  value = module.iam.le_dockerhost_id
 }
 
 
 output "le_proxmox_secret" {
-  value = module.iam.le_proxmox_secret
+  value = module.iam.le_dockerhost_secret
   sensitive = true
 }
 
