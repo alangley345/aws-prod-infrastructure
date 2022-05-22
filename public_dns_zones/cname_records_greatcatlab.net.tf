@@ -17,7 +17,7 @@ resource "aws_route53_record" "portainer" {
 }
 
 #OVH Server
-resource "aws_route53_record" "portainer" {
+resource "aws_route53_record" "cockpit" {
  zone_id = aws_route53_zone.greatcatlab.zone_id
  name    = "cockpit.greatcatlab.net"
  type    = "CNAME"
