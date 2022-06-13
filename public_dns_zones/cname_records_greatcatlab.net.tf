@@ -24,3 +24,12 @@ resource "aws_route53_record" "cockpit" {
  ttl     = "300"
  records = ["dockerhost01.greatcatlab.net"]
 }
+
+#OVH Server
+resource "aws_route53_record" "mirth" {
+ zone_id = aws_route53_zone.greatcatlab.zone_id
+ name    = "mirth.greatcatlab.net"
+ type    = "CNAME"
+ ttl     = "300"
+ records = ["dockerhost01.greatcatlab.net"]
+}
