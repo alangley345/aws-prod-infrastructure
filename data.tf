@@ -1,5 +1,5 @@
 data "local_file" "pgp_key" {
-  filename = "access-key-signing-base64.gpg"
+  filename = "Terraform-Access-Secret-Signing.gpg"
 }
 
 data "aws_caller_identity" "current" {}
