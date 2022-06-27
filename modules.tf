@@ -34,3 +34,8 @@ module "iam" {
 module "vpc" {
   source = "./vpc"
 }
+
+#billing
+module "billing" {
+  source = "./billing"
+}
