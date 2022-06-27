@@ -39,3 +39,8 @@ module "vpc" {
 module "billing" {
   source = "./billing"
 }
+
+#ecs
+module "ecs" {
+  source = "./ecs"
+}
