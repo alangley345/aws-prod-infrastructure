@@ -29,3 +29,8 @@ module "iam" {
 
  pgp_key = data.local_file.pgp_key.content
 }
+
+#vpcs
+module "vpc" {
+  source = "./vpc"
+}
