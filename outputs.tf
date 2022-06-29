@@ -93,3 +93,12 @@ output "cloudresume_id" {
 output "cloudresume_secret" {
    value = module.iam.cloudresume_secret
 }
+
+#Github Actions user for hl7-to-rbd
+output "hl7-to-rdb_id" {
+  value = module.iam.hl7-to-rdb_id
+}
+
+output "hl7-to-rdb_secret" {
+ value = module.iam.hl7-to-rdb_secret
+}

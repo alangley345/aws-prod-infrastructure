@@ -17,7 +17,7 @@ resource "aws_iam_user_group_membership" "hl7-to-rdb" {
   ]
 }
 
-resource "aws_iam_access_key" "hl7-to-rdb" {
+resource "aws_iam_access_key" "hl7-to-rbd" {
   user    = aws_iam_user.hl7-to-rdb.name
   pgp_key = var.pgp_key
   
