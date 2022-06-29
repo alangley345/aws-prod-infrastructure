@@ -93,3 +93,7 @@ output "cloudresume_id" {
 output "cloudresume_secret" {
    value = module.iam.cloudresume_secret
 }
+
+output "production_vpc" {
+    value = module.vpc.production_vpc
+}
