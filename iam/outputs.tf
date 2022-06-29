@@ -36,9 +36,9 @@ output "cloudresume_secret" {
 
 #used for terraform access for hl7-to-rbd project
 output "hl7-to-rdb_id" {
- value = aws_iam_access_key.hl7-to-rbd.id
+ value = aws_iam_access_key.hl7-to-rdb.id
 }
 
 output "hl7-to-rdb_secret" {
-  value = aws_iam_access_key.hl7-to-rbd.encrypted_secret
+  value = aws_iam_access_key.hl7-to-rdb.encrypted_secret
 }
