@@ -94,6 +94,7 @@ output "cloudresume_secret" {
    value = module.iam.cloudresume_secret
 }
 
+<<<<<<< HEAD
 #Github Actions user for hl7-to-rbd
 output "hl7-to-rdb_id" {
   value = module.iam.hl7-to-rdb_id
@@ -102,3 +103,8 @@ output "hl7-to-rdb_id" {
 output "hl7-to-rdb_secret" {
  value = module.iam.hl7-to-rdb_secret
 }
+=======
+output "production_vpc" {
+    value = module.vpc.production_vpc
+}
+>>>>>>> 9706996c6d9b6f471101839c8e11b382345bde8e
