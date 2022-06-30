@@ -1,7 +1,12 @@
 resource "aws_default_network_acl" "production" {
   default_network_acl_id = aws_vpc.production.default_network_acl_id
   depends_on             = [aws_vpc.production]
-
+  subnet_ids             = [ 
+    aws_subnet.production-0.id,
+    aws_subnet.production-1.id,
+    aws_subnet.production-2.id,
+    aws_subnet.production-3.id
+  ]
   #egress rules
   egress {
     rule_no    = 100
