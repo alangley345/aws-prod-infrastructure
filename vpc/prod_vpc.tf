@@ -7,6 +7,24 @@ resource "aws_vpc" "production" {
   }
 }
 
+resource "aws_default_security_group" "production" {
+  vpc_id = aws_vpc.production.id
+
+  #ingress {
+  # protocol  = -1
+  # self      = true
+  # from_port = 0
+  # to_port   = 0
+  #}
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 #Subnet1 10.40.0.0/24
 resource "aws_subnet" "production-0" {
   vpc_id            = aws_vpc.production.id

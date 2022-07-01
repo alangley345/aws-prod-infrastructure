@@ -105,3 +105,7 @@ output "hl7-to-rdb_secret" {
 output "production_vpc" {
     value = module.vpc.production_vpc
 }
+
+output "production_default_sg" {
+    value = module.vpc.production_default_sg
+}
