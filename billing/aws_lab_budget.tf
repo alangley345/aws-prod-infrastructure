@@ -1,9 +1,9 @@
 resource "aws_budgets_budget" "aws-monthly-lab-budget" {
-  name              = "AWS Monthly Lab Budget"
-  budget_type       = "COST"
-  limit_amount      = "5"
-  limit_unit        = "USD"
-  time_unit         = "MONTHLY"
+  name         = "AWS Monthly Lab Budget"
+  budget_type  = "COST"
+  limit_amount = "5"
+  limit_unit   = "USD"
+  time_unit    = "MONTHLY"
 
   notification {
     comparison_operator        = "GREATER_THAN"

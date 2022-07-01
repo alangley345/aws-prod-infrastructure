@@ -20,14 +20,14 @@ module "api_gateway" {
 
 #s3 buckets
 module "s3" {
- source = "./s3"
+  source = "./s3"
 }
 
 #iam
 module "iam" {
- source = "./iam"
+  source = "./iam"
 
- pgp_key = data.local_file.pgp_key.content
+  pgp_key = data.local_file.pgp_key.content
 }
 
 #vpcs

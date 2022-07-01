@@ -1,15 +1,15 @@
 #pgp public key
 output "access_token_signing" {
-    value = data.local_file.pgp_key.content
+  value = data.local_file.pgp_key.content
 }
 
 #Lambda
 output "lambda_bucket_arn" {
-    value = module.s3.lambdafunctionstaging_arn
+  value = module.s3.lambdafunctionstaging_arn
 }
 
 output "lambda_bucket_name" {
-    value = module.s3.lambdafunctionstaging_id
+  value = module.s3.lambdafunctionstaging_id
 }
 
 #API
@@ -60,7 +60,7 @@ output "le_dockerhost_id" {
 
 
 output "le_dockerhost_secret" {
-  value = module.iam.le_dockerhost_secret
+  value     = module.iam.le_dockerhost_secret
   sensitive = true
 }
 
@@ -70,7 +70,7 @@ output "le_pfsense02_id" {
 }
 
 output "le_pfsense02_secret" {
-  value = module.iam.le_pfsense02_secret
+  value     = module.iam.le_pfsense02_secret
   sensitive = true
 }
 
@@ -80,9 +80,9 @@ output "le_pfsense01_id" {
 }
 
 output "le_pfsense01_secret" {
-  value = module.iam.le_pfsense01_secret
+  value     = module.iam.le_pfsense01_secret
   sensitive = true
-  
+
 }
 
 #Github Actions user for cloudresume-frontend
@@ -91,7 +91,7 @@ output "cloudresume_id" {
 }
 
 output "cloudresume_secret" {
-   value = module.iam.cloudresume_secret
+  value = module.iam.cloudresume_secret
 }
 
 #Github Actions user for hl7-to-rbd
@@ -100,12 +100,12 @@ output "hl7-to-rdb_id" {
 }
 
 output "hl7-to-rdb_secret" {
- value = module.iam.hl7-to-rdb_secret
+  value = module.iam.hl7-to-rdb_secret
 }
 output "production_vpc_id" {
-    value = module.vpc.production_vpc_id
+  value = module.vpc.production_vpc_id
 }
 
 output "production_default_sg" {
-    value = module.vpc.production_default_sg
+  value = module.vpc.production_default_sg
 }

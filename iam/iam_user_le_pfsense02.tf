@@ -14,5 +14,5 @@ resource "aws_iam_user_group_membership" "le_pfsense02" {
 
 #access keys
 resource "aws_iam_access_key" "le_pfsense02" {
-  user    = aws_iam_user.le_pfsense02.name
+  user = aws_iam_user.le_pfsense02.name
 }
