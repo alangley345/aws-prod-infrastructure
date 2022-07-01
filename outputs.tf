@@ -106,6 +106,6 @@ output "production_vpc_id" {
   value = module.vpc.production_vpc_id
 }
 
-output "production_default_sg" {
-  value = module.vpc.production_default_sg
+output "production_default_sg_id" {
+  value = module.vpc.production_default_sg_id
 }

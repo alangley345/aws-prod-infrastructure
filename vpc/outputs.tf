@@ -3,5 +3,5 @@ output "production_vpc_id" {
 }
 
 output "production_default_sg" {
-  value = aws_default_security_group.production
+  value = aws_default_security_group.production.id
 }
