@@ -1,27 +1,31 @@
 #Internet gateway for Production VPC
-resource "aws_internet_gateway" "production" {
-  vpc_id     = aws_vpc.production.id
-  depends_on = [aws_vpc.production]
+resource "aws_internet_gateway" "prod-external" {
+  vpc_id     = aws_vpc.prod-external.id
+  depends_on = [aws_vpc.prod-external]
   tags = {
-    Name = "Production"
+    Name        = "External GW"
+    purpose     = "Production External Network"
+    environment = "prod" 
   }
 }
 
 #create route table for Production VPC
-resource "aws_route_table" "production" {
-  vpc_id     = aws_vpc.production.id
-  depends_on = [aws_internet_gateway.production, aws_vpc.production]
+resource "aws_route_table" "prod-external" {
+  vpc_id     = aws_vpc.prod-external.id
+  depends_on = [aws_internet_gateway.prod-external, aws_vpc.prod-external]
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.production.id
+    gateway_id = aws_internet_gateway.prod-external.id
   }
 
   tags = {
-    Name = "Production"
+    Name        = "External Route Table"
+    purpose     = "Production External Network"
+    environment = "prod" 
   }
 }
 
-resource "aws_main_route_table_association" "production" {
-  vpc_id         = aws_vpc.production.id
-  route_table_id = aws_route_table.production.id
+resource "aws_main_route_table_association" "prod-external" {
+  vpc_id         = aws_vpc.prod-external.id
+  route_table_id = aws_route_table.prod-external.id
 }

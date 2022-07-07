@@ -102,10 +102,10 @@ output "hl7-to-rdb_id" {
 output "hl7-to-rdb_secret" {
   value = module.iam.hl7-to-rdb_secret
 }
-output "production_vpc_id" {
-  value = module.vpc.production_vpc_id
-}
-
-output "production_default_sg_id" {
-  value = module.vpc.production_default_sg_id
-}
+#output "production_vpc_id" {
+#  value = module.vpc.production_vpc_id
+#}
+#
+#output "production_default_sg_id" {
+#  value = module.vpc.production_default_sg_id
+#}
