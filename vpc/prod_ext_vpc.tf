@@ -36,6 +36,7 @@ resource "aws_subnet" "prod-external-0" {
   cidr_block        = "10.41.0.0/24"
   depends_on        = [aws_vpc.prod-external]
   availability_zone = "us-east-1a"
+  map_public_ip_on_launch = true
   tags = {
     Name        = "Subnet0-1a"
     purpose     = "Production External Network"
