@@ -7,6 +7,7 @@ resource "aws_default_network_acl" "prod-external" {
     aws_subnet.prod-external-2.id,
     aws_subnet.prod-external-3.id
   ]
+  
   #egress rules
   egress {
     rule_no    = 100
