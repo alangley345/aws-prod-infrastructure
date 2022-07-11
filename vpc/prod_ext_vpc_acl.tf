@@ -31,14 +31,12 @@ resource "aws_default_network_acl" "prod-external" {
 
   #ingress rule
   ingress {
+    protocol   = "-1"
     rule_no    = 100
-    protocol   = "icmp"
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
     from_port  = 0
     to_port    = 0
-    icmp_type  = -1
-    icmp_code  = -1
-    cidr_block = "0.0.0.0/0"
-    action     = "allow"
   }
 
 
