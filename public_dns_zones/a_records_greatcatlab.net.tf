@@ -38,4 +38,3 @@ resource "aws_route53_record" "ovh_main_v4" {
  ttl     = "300"
  records = ["147.135.5.154"]
 }
-
