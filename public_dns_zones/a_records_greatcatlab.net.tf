@@ -33,7 +33,7 @@ resource "aws_route53_record" "vdi01" {
 #OVH Server
 resource "aws_route53_record" "ovh_main_v4" {
  zone_id = aws_route53_zone.greatcatlab.zone_id
- name    = "dockerhost01.greatcatlab.net"
+ name    = "esxi.greatcatlab.net"
  type    = "A"
  ttl     = "300"
  records = ["147.135.5.154"]
