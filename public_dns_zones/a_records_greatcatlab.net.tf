@@ -30,11 +30,11 @@ resource "aws_route53_record" "vdi01" {
  records = ["207.2.123.123"]
 }
 
-#OVH Server
-resource "aws_route53_record" "ovh_main_v4" {
+#vultr
+resource "aws_route53_record" "vultr_01_v4" {
  zone_id = aws_route53_zone.greatcatlab.zone_id
- name    = "esxi.greatcatlab.net"
+ name    = "vultr01.greatcatlab.net"
  type    = "A"
  ttl     = "300"
- records = ["147.135.5.154"]
+ records = ["104.238.131.32"]
 }
