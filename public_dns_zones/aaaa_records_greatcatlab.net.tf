@@ -8,7 +8,7 @@ resource "aws_route53_record" "vultr_01_v6" {
 }
 
 #ipa-a
-resource "aws_route53_record" "vultr_01_v6" {
+resource "aws_route53_record" "ipa-a_v6" {
  zone_id = aws_route53_zone.greatcatlab.zone_id
  name    = "ipa-a.greatcatlab.net"
  type    = "AAAA"
