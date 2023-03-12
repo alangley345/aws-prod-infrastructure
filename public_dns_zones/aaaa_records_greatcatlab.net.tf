@@ -8,10 +8,19 @@ resource "aws_route53_record" "vultr_01_v6" {
 }
 
 #ipa-a
-resource "aws_route53_record" "ipa-a_v6" {
+resource "aws_route53_record" "ipa_a_v6" {
  zone_id = aws_route53_zone.greatcatlab.zone_id
- name    = "ipa-a.greatcatlab.net"
+ name    = "ipa-a.int.greatcatlab.net"
  type    = "AAAA"
  ttl     = "300"
  records = ["2001:470:8a70:1000::100"]
+}
+
+#ipa-b
+resource "aws_route53_record" "ipa_b_v6" {
+ zone_id = aws_route53_zone.greatcatlab.zone_id
+ name    = "ipa-b.int.greatcatlab.net"
+ type    = "AAAA"
+ ttl     = "300"
+ records = ["2001:470:8a70:1000::101"]
 }
