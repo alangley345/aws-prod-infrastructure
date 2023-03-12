@@ -6,10 +6,10 @@ resource "aws_route53_record" "tunnel_greatcatlab_net" {
   records = ["ns1.he.net.","ns2.he.net.","ns3.he.net.","ns4.he.net.","ns5.he.net."]
 }
 
-resource "aws_route53_record" "ipa_greatcatlab_net" {
+resource "aws_route53_record" "int_greatcatlab_net" {
   zone_id = aws_route53_zone.greatcatlab.zone_id
-  name    = "ipa.greatcatlab.net"
+  name    = "int.greatcatlab.net"
   type    = "NS"
   ttl     = "300"
-  records = ["ipa-a.greatcatlab.net."]
+  records = ["ipa-a.int.greatcatlab.net.","ipa-b.int.greatcatlab.net."]
 }
