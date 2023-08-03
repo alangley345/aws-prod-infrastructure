@@ -11,5 +11,5 @@ resource "aws_route53_record" "int_greatcatlab_net" {
   name    = "int.greatcatlab.net"
   type    = "NS"
   ttl     = "300"
-  records = ["ipa-a.int.greatcatlab.net.","ipa-b.int.greatcatlab.net."]
+  records = ["bind-a.int.greatcatlab.net.","bind-b.int.greatcatlab.net."]
 }
