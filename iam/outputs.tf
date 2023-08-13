@@ -1,19 +1,10 @@
-#let's encrypt user for Docker host
-output "le_dockerhost_id" {
-  value = aws_iam_access_key.le_dockerhost.id
+#lets encrypt user for internal haproxy
+output "le_int_haproxy_id" {
+  value = aws_iam_access_key.le_int_haproxy.id
 }
 
-output "le_dockerhost_secret" {
-  value = aws_iam_access_key.le_dockerhost.secret
-}
-
-#lets encrypt user for pfsense02 @ OVH
-output "le_pfsense02_id" {
-  value = aws_iam_access_key.le_pfsense02.id
-}
-
-output "le_pfsense02_secret" {
-  value = aws_iam_access_key.le_pfsense02.secret
+output "le_int_haproxy_secret" {
+  value = aws_iam_access_key.le_int_haproxy.secret
 }
 
 #lets encrypt user for pfsense01 @ HOME

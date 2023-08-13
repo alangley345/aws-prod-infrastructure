@@ -53,24 +53,13 @@ output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
 
-#Let's Encrypt User for ACME on Dockerhost
-output "le_dockerhost_id" {
-  value = module.iam.le_dockerhost_id
-}
-
-
-output "le_dockerhost_secret" {
-  value     = module.iam.le_dockerhost_secret
-  sensitive = true
-}
-
 #Let's Encrypt User for ACME on pfsense02
-output "le_pfsense02_id" {
-  value = module.iam.le_pfsense02_id
+output "le_int_haproxy_id" {
+  value = module.iam.le_int_haproxy_id
 }
 
-output "le_pfsense02_secret" {
-  value     = module.iam.le_pfsense02_secret
+output "le_int_haproxy_secret" {
+  value     = module.iam.le_int_haproxy_secret
   sensitive = true
 }
 
